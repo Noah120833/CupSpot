@@ -11,7 +11,6 @@ import type { Cafe } from './types'
 function App() {
 const [cafes, SetCafes] = useState<Cafe[]>([])
 const [selectedCafe, setSelectedCafe] = useState<Cafe | null>(null)
-const [currentRating, setCurrentRating] = useState<Cafe | null>(null)
 
 useEffect(() => {
   const fetchcafes = async () => {
@@ -26,9 +25,7 @@ useEffect(() => {
 console.log(cafes)
 }, [cafes])
 
-useEffect(() => {
-  console.log(selectedCafe, currentRating)
-}, [selectedCafe])
+
 
   return (
     <div className="app">

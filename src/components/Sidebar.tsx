@@ -63,7 +63,7 @@ function Sidebar({ cafes, selectedCafe }: SidebarProps) {
 
       {selectedCafe ? (
         <div className='cafe-card'>
-          {selectedCafe.image_url && <img src={selectedCafe.image_url} className='cafe-img' />}
+          {selectedCafe.image_url && <img alt="cafeimg" src={selectedCafe.image_url} className='cafe-img' />}
           <h3>{selectedCafe.name}</h3>
           <p>{selectedCafe.address}</p>
 
@@ -83,7 +83,7 @@ function Sidebar({ cafes, selectedCafe }: SidebarProps) {
           <p className='sidebar-subtitle'>Nearby cafés</p>
           {cafes.map(cafe => (
             <div key={cafe.id} className='cafe-card'>
-              {cafe.image_url && <img src={cafe.image_url} className='cafe-img' />}
+              {cafe.image_url && <img alt="cafeimagedirect" src={cafe.image_url} className='cafe-img' />}
               <h3>{cafe.name}</h3>
               <p>{cafe.address}</p>
               <button type="button" className='rate-btn' onClick={() => setCafeToRate(cafe)}>Rate this café</button>
