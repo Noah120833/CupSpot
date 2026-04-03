@@ -2,6 +2,18 @@ import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 import '../App.css'
 import type { Cafe } from '../types'
 
+import L from 'leaflet'
+import iconUrl from 'leaflet/dist/images/marker-icon.png'
+import iconShadow from 'leaflet/dist/images/marker-shadow.png'
+
+const defaultIcon = L.icon({
+  iconUrl,
+  shadowUrl: iconShadow,
+  iconSize: [25, 41],
+  iconAnchor: [12, 41]
+})
+
+L.Marker.prototype.options.icon = defaultIcon
 
 type MapProps = {
   cafes: Cafe[]
