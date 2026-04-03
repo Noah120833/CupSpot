@@ -6,7 +6,7 @@ import type { Cafe } from '../types'
 type SidebarProps = {
   cafes: Cafe[]
   selectedCafe: Cafe | null
-  onRate: (cafe: Cafe) => void
+
 }
 
 type RatingState = {
@@ -30,7 +30,7 @@ function StarRating({ label, value, onChange }: { label: string, value: number, 
   )
 }
 
-function Sidebar({ cafes, selectedCafe, onRate }: SidebarProps) {
+function Sidebar({ cafes, selectedCafe }: SidebarProps) {
   const [cafeToRate, setCafeToRate] = useState<Cafe | null>(null)
   const [newRatings, setNewRatings] = useState<{ wifi: number, noise: number, outlets: number, crowdedness: number } | null>(null)
   const [rating, setRating] = useState<RatingState>({ wifi: 0, noise: 0, outlets: 0, crowdedness: 0, comment: '' })

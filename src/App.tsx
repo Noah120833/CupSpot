@@ -16,7 +16,7 @@ const [currentRating, setCurrentRating] = useState<Cafe | null>(null)
 useEffect(() => {
   const fetchcafes = async () => {
 const { data } = await supabase.from('cafes').select('*')
-SetCafes(data);
+SetCafes(data ?? [])
   }
   fetchcafes();
   // fetch data here
