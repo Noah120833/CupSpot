@@ -35,7 +35,7 @@ useEffect(() => {
       <div className="searchbar-container">
         <Searchbar cafes={cafes} onSelect={setSelectedCafe} />
       </div>
-      <Sidebar cafes={cafes} selectedCafe={selectedCafe} onRate={setCurrentRating}/>
+      <Sidebar cafes={cafes} selectedCafe={selectedCafe} />
       <Map cafes={cafes} onSelectCafe={setSelectedCafe} />
     </div>
   )
